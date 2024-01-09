@@ -20,14 +20,14 @@ const Sidebar = () => {
     },
     {
       icon: BsBellFill,
-      label: 'Notifications',
+      label: 'Thông Báo',
       href: '/notifications',
       auth: true,
       alert: currentUser?.hasNotification
     },
     {
       icon: FaUser,
-      label: 'Profile',
+      label: 'Trang Cá Nhân',
       href: `/users/${currentUser?.id}`,
       auth: true,
     },
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 label={item.label}
               />
             ))}
-            {currentUser && <SidebarItem onClick={() => signOut()} icon={BiLogOut} label="Logout" />}
+            {currentUser && <SidebarItem onClick={() => signOut()} icon={BiLogOut} label="Đăng Xuất" />}
             <SidebarTweetButton />
           </div>
         </div>
